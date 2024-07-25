@@ -33,7 +33,7 @@ MEL_PARAMS = {"n_mels": 80, "n_fft": 2048, "win_length": 1200, "hop_length": 300
 
 
 class MelDataset(torch.utils.data.Dataset):
-    def __init__(self, data_list, sr=48000, data_augmentation=False, validation=False, verbose=True):
+    def __init__(self, data_list, sr=32000, data_augmentation=False, validation=False, verbose=True):
 
         _data_list = [l[:-1].split("|") for l in data_list]
         self.data_list = [d[0] for d in _data_list]
